@@ -1,0 +1,224 @@
+//Experiment 3 - Question no. 1
+
+#include <iostream>
+#include <conio.h>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	int value, bigval, biggest;
+	double sum, ave;
+	int num[10];
+	  
+	cout << "Enter 10 numbers: " << endl;
+
+	for (value = 0; value < 10; value++)
+		num[value] = 0;
+	
+	for (value = 0; value < 10; value++)
+		cin >> num[value];
+
+	sum = 0;
+
+	for (value = 0; value < 10; value++)
+		sum = sum + num[value];
+
+	cout << endl;
+	cout << "The total sum is ";
+	cout << sum << endl;
+
+	ave = sum / 10;
+	cout << "The average is ";
+	cout << fixed;
+	cout << setprecision(2);
+	cout << ave << endl;
+
+	bigval = 0;
+	for (value = 1; value < 10; value++)
+		if (num[bigval] < num[value])
+			bigval = value;
+	
+	biggest = num[bigval];
+	cout << "The largest number is ";
+	cout << biggest << endl;
+
+
+
+
+
+	_getch();
+	return 0;
+}
+
+//Experiment 3 - Question no. 2
+
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int provinceA[7];
+	int provinceB[7];
+	int provinceC[7];
+	int temperature;
+
+	cout << "Enter the temperature in Province A, for the week: " << endl;
+
+	for (temperature = 0; temperature < 1; temperature++)
+		cin >> provinceA[0];
+
+	for (temperature = 0; temperature < 1; temperature++)
+		cin >> provinceA[1];
+
+	for (temperature = 0; temperature < 1; temperature++)
+		cin >> provinceA[2];
+
+	for (temperature = 0; temperature < 1; temperature++)
+		cin >> provinceA[3];
+
+	for (temperature = 0; temperature < 1; temperature++)
+		cin >> provinceA[4];
+
+	for (temperature = 0; temperature < 1; temperature++)
+		cin >> provinceA[5];
+
+	for (temperature = 0; temperature < 1; temperature++)
+		cin >> provinceA[6];
+
+	cout << "Enter the temperature in Province B, for the week: " << endl;
+
+	for (temperature = 0; temperature < 1; temperature++)
+		cin >> provinceB[0];
+
+	for (temperature = 0; temperature < 1; temperature++)
+		cin >> provinceB[1];
+
+	for (temperature = 0; temperature < 1; temperature++)
+		cin >> provinceB[2];
+
+	for (temperature = 0; temperature < 1; temperature++)
+		cin >> provinceB[3];
+
+	for (temperature = 0; temperature < 1; temperature++)
+		cin >> provinceB[4];
+
+	for (temperature = 0; temperature < 1; temperature++)
+		cin >> provinceB[5];
+
+	for (temperature = 0; temperature < 1; temperature++)
+		cin >> provinceB[6];
+
+	cout << "Enter the temperature in Province C, for the week: " << endl;
+
+	for (temperature = 0; temperature < 1; temperature++)
+		cin >> provinceC[0];
+
+	for (temperature = 0; temperature < 1; temperature++)
+		cin >> provinceC[1];
+
+	for (temperature = 0; temperature < 1; temperature++)
+		cin >> provinceC[2];
+
+	for (temperature = 0; temperature < 1; temperature++)
+		cin >> provinceC[3];
+
+	for (temperature = 0; temperature < 1; temperature++)
+		cin >> provinceC[4];
+
+	for (temperature = 0; temperature < 1; temperature++)
+		cin >> provinceC[5];
+
+	for (temperature = 0; temperature < 1; temperature++)
+		cin >> provinceC[6];
+
+	cout << endl;
+
+	for (temperature = 0; temperature < 1; temperature++)
+		cout << "Province A, Day 1 = " << provinceA[0] << endl;
+		cout << "Province A, Day 2 = " << provinceA[1] << endl;
+		cout << "Province A, Day 3 = " << provinceA[2] << endl;
+		cout << "Province A, Day 4 = " << provinceA[3] << endl;
+		cout << "Province A, Day 5 = " << provinceA[4] << endl;
+		cout << "Province A, Day 6 = " << provinceA[5] << endl;
+		cout << "Province A, Day 7 = " << provinceA[6] << endl;
+		cout << endl;
+
+		cout << "Province B, Day 1 = " << provinceB[0] << endl;
+		cout << "Province B, Day 2 = " << provinceB[1] << endl;
+		cout << "Province B, Day 3 = " << provinceB[2] << endl;
+		cout << "Province B, Day 4 = " << provinceB[3] << endl;
+		cout << "Province B, Day 5 = " << provinceB[4] << endl;
+		cout << "Province B, Day 6 = " << provinceB[5] << endl;
+		cout << "Province B, Day 7 = " << provinceB[6] << endl;
+		cout << endl;
+
+		cout << "Province C, Day 1 = " << provinceC[0] << endl;
+		cout << "Province C, Day 2 = " << provinceC[1] << endl;
+		cout << "Province C, Day 3 = " << provinceC[2] << endl;
+		cout << "Province C, Day 4 = " << provinceC[3] << endl;
+		cout << "Province C, Day 5 = " << provinceC[4] << endl;
+		cout << "Province C, Day 6 = " << provinceC[5] << endl;
+		cout << "Province C, Day 7 = " << provinceC[6] << endl;
+
+
+
+	_getch();
+	return 0;
+}
+
+// Experiment 3 - Question no. 3
+
+#include <iostream>
+#include <string.h>
+#include <stdio.h>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	char str[6][20], t[20];
+	int i, j;
+	cout << "Enter Any Characters : " << endl;
+	for (i = 0; i <= 6; i++)
+	{
+		cin >> str[i];
+	}
+	for (i = 1; i <= 6; i++)
+	{
+		for (j = 1; j <= 6; j++)
+		{
+			if (strcmp(str[j - 1], str[j]) > 0)
+			{
+				strcpy_s(t, str[j - 1]);
+				strcpy_s(str[j - 1], str[j]);
+				strcpy_s(str[j], t);
+			}
+		}
+	}
+	cout << endl;
+	cout << "Letterd Sorted in Alphabetical Order : " << endl;
+	for (i = 0; i <= 6; i++)
+	{
+		cout << " ";
+		cout << str[i] << " , ";
+	}
+
+	cout << endl;
+	cout << endl;
+
+	cout << "The size of the array is : " << endl;
+	int size = sizeof(i) + 3;
+	cout << size;
+
+	_getch();
+	return 0;
+}
+
+	
+
+
