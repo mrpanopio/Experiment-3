@@ -201,7 +201,7 @@ int main()
 		}
 	}
 	cout << endl;
-	cout << "Letterd Sorted in Alphabetical Order : " << endl;
+	cout << "Letter Sorted in Alphabetical Order : " << endl;
 	for (i = 0; i <= 6; i++)
 	{
 		cout << " ";
